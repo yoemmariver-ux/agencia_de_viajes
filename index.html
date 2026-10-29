@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rumbo Norte – Viajes por Argentina y Sudamérica</title>
+  <meta name="description" content="Paquetes de viaje a la Puna, Cataratas, Patagonia y más. Armamos tu viaje y te acompañamos de principio a fin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#inicio">Rumbo Norte</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="menu">
+    <a href="#destinos">Destinos</a>
+    <a href="#ofertas">Ofertas</a>
+    <a href="#nosotros">Por qué elegirnos</a>
+    <a href="#opiniones">Opiniones</a>
+    <a class="btn btn-sm" href="#contacto">Pedir presupuesto</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <svg class="scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0B3954"/>
+          <stop offset=".55" stop-color="#6C4AB6"/>
+          <stop offset="1" stop-color="#FFC857"/>
+        </linearGradient>
+      </defs>
+      <rect width="1440" height="800" fill="url(#sky)"/>
+      <g data-speed="0.05" class="stars" fill="#fff">
+        <circle cx="120" cy="90" r="2"/><circle cx="360" cy="150" r="1.5"/><circle cx="620" cy="70" r="2"/>
+        <circle cx="900" cy="130" r="1.5"/><circle cx="1180" cy="80" r="2"/><circle cx="1330" cy="190" r="1.5"/>
+      </g>
+      <circle data-speed="0.18" cx="1030" cy="470" r="96" fill="#FFE29A"/>
+      <path data-speed="0.30" d="M0 560 L180 400 L300 500 L470 330 L640 520 L800 420 L980 540 L1160 380 L1300 480 L1440 410 V800 H0Z" fill="#4B3F9E" opacity=".85"/>
+      <path data-speed="0.45" d="M0 640 L140 520 L290 610 L460 470 L620 620 L790 520 L960 640 L1130 500 L1300 620 L1440 540 V800 H0Z" fill="#2A5F86"/>
+      <path data-speed="0.65" d="M0 730 L170 640 L340 720 L520 620 L700 730 L880 650 L1060 740 L1240 650 L1440 720 V800 H0Z" fill="#0B3954"/>
+    </svg>
+
+    <div class="hero-content">
+      <h1>El próximo viaje de tu vida empieza acá</h1>
+      <p>Salinas, cerros de siete colores, cataratas y glaciares. Elegí el destino y nosotros nos ocupamos del resto.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#destinos">Ver destinos</a>
+        <a class="btn btn-ghost" href="#contacto">Hablar con un asesor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINOS -->
+  <section class="section" id="destinos">
+    <div class="wrap">
+      <h2>Destinos para salir ya</h2>
+      <p class="lead">Filtrá por tipo de viaje y mirá qué incluye cada paquete.</p>
+
+      <div class="filters" role="tablist" aria-label="Filtrar destinos">
+        <button class="chip active" data-filter="todos">Todos</button>
+        <button class="chip" data-filter="montana">Montaña</button>
+        <button class="chip" data-filter="naturaleza">Naturaleza</button>
+        <button class="chip" data-filter="playa">Playa</button>
+        <button class="chip" data-filter="internacional">Internacional</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <article class="card" data-cat="montana" data-dest="Puna catamarqueña">
+          <div class="card-img img-puna"></div>
+          <div class="card-body">
+            <h3>Puna catamarqueña</h3>
+            <p>Laguna Verde, Tres Cruces y salares. 5 días y 4 noches.</p>
+            <div class="card-foot"><span class="price">Desde $ 520.000</span><button class="link" data-reservar>Consultar</button></div>
+          </div>
+        </article>
+        <article class="card" data-cat="montana" data-dest="Salta y Jujuy">
+          <div class="card-img img-quebrada"></div>
+          <div class="card-body">
+            <h3>Salta y Jujuy</h3>
+            <p>Quebrada de Humahuaca, Purmamarca y Salinas Grandes. 6 días.</p>
+            <div class="card-foot"><span class="price">Desde $ 610.000</span><button class="link" data-reservar>Consultar</button></div>
+          </div>
+        </article>
+        <article class="card" data-cat="naturaleza" data-dest="Cataratas del Iguazú">
+          <div class="card-img img-iguazu"></div>
+          <div class="card-body">
+            <h3>Cataratas del Iguazú</h3>
+            <p>Garganta del Diablo, selva y cruce de frontera. 4 días.</p>
+            <div class="card-foot"><span class="price">Desde $ 580.000</span><button class="link" data-reservar>Consultar</button></div>
+          </div>
+        </article>
+        <article class="card" data-cat="naturaleza montana" data-dest="Patagonia y glaciares">
+          <div class="card-img img-patagonia"></div>
+          <div class="card-body">
+            <h3>Patagonia y glaciares</h3>
+            <p>El Calafate, Perito Moreno y El Chaltén. 7 días.</p>
+            <div class="card-foot"><span class="price">Desde $ 1.150.000</span><button class="link" data-reservar>Consultar</button></div>
+          </div>
+        </article>
+        <article class="card" data-cat="playa internacional" data-dest="Brasil: Florianópolis">
+          <div class="card-img img-playa"></div>
+          <div class="card-body">
+            <h3>Brasil: Florianópolis</h3>
+            <p>Playas, gastronomía y vuelo incluido. 8 días y 7 noches.</p>
+            <div class="card-foot"><span class="price">Desde $ 890.000</span><button class="link" data-reservar>Consultar</button></div>
+          </div>
+        </article>
+        <article class="card" data-cat="internacional montana" data-dest="Cusco y Machu Picchu">
+          <div class="card-img img-cusco"></div>
+          <div class="card-body">
+            <h3>Cusco y Machu Picchu</h3>
+            <p>Valle Sagrado, tren y entrada a la ciudadela. 9 días.</p>
+            <div class="card-foot"><span class="price">Desde $ 1.480.000</span><button class="link" data-reservar>Consultar</button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTAS -->
+  <section class="offer" id="ofertas">
+    <div class="wrap offer-inner">
+      <div>
+        <h2>Reservá ahora y viajá en cuotas sin interés</h2>
+        <p class="lead">Paquetes seleccionados con 10 % de descuento por tiempo limitado.</p>
+      </div>
+      <div class="countdown" id="countdown" aria-live="off">
+        <div><b id="cd-d">00</b><span>días</span></div>
+        <div><b id="cd-h">00</b><span>horas</span></div>
+        <div><b id="cd-m">00</b><span>min</span></div>
+        <div><b id="cd-s">00</b><span>seg</span></div>
+      </div>
+      <a class="btn btn-dark" href="#contacto">Quiero mi descuento</a>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="section" id="nosotros">
+    <div class="wrap">
+      <h2>Viajá tranquilo, nosotros lo resolvemos</h2>
+      <div class="stats">
+        <div><b data-count="12">0</b><span>años armando viajes</span></div>
+        <div><b data-count="4800">0</b><span>viajeros felices</span></div>
+        <div><b data-count="35">0</b><span>destinos disponibles</span></div>
+        <div><b data-count="98" data-suffix="%">0</b><span>recomienda el servicio</span></div>
+      </div>
+      <div class="perks">
+        <div><h3>Asesor personal</h3><p>Una sola persona te acompaña antes, durante y después del viaje.</p></div>
+        <div><h3>Precio final claro</h3><p>Te mostramos todo lo que incluye. Sin costos ocultos.</p></div>
+        <div><h3>Asistencia 24 hs</h3><p>Si pasa algo en el camino, escribinos por WhatsApp y respondemos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIONES -->
+  <section class="section tinted" id="opiniones">
+    <div class="wrap">
+      <h2>Lo que cuentan quienes ya viajaron</h2>
+      <div class="slider" id="slider">
+        <blockquote class="slide active"><p>Organizaron todo el viaje a Salta con mi familia. Cero estrés y los guías fueron excelentes.</p><cite>Marcela, Catamarca</cite></blockquote>
+        <blockquote class="slide"><p>Las Cataratas superaron lo que imaginaba. Nos ayudaron hasta con el cruce a Brasil.</p><cite>Julián, Tucumán</cite></blockquote>
+        <blockquote class="slide"><p>Me armaron un presupuesto a medida en el día y lo pagué en cuotas. Muy recomendable.</p><cite>Lucía, La Rioja</cite></blockquote>
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="wrap contact">
+      <div>
+        <h2>Contanos a dónde querés ir</h2>
+        <p class="lead">Completá el formulario y te respondemos por WhatsApp con un presupuesto.</p>
+      </div>
+      <form id="form" novalidate>
+        <label>Nombre<input type="text" id="nombre" required autocomplete="name"></label>
+        <label>Destino
+          <select id="destino">
+            <option>Puna catamarqueña</option><option>Salta y Jujuy</option><option>Cataratas del Iguazú</option>
+            <option>Patagonia y glaciares</option><option>Brasil: Florianópolis</option><option>Cusco y Machu Picchu</option><option>Otro</option>
+          </select>
+        </label>
+        <label>Cantidad de personas<input type="number" id="personas" min="1" value="2"></label>
+        <p class="error" id="error" role="alert"></p>
+        <button class="btn" type="submit">Enviar consulta por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Rumbo Norte · Agencia de viajes · Catamarca, Argentina</p>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">WhatsApp</a>
+
+<script src="script.js"></script>
+</body>
+</html>
